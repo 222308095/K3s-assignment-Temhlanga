@@ -121,7 +121,7 @@ Record the values — you will need them throughout this guide:
 
 | Hostname | Private IP | Public IP |
 |----------|------------|-----------|
-| k3s-master-1 | 172.31.88.100 | 52.90.177.146 |
+| k3s-master-1 | 172.31.92.217 | 44.202.232.41 |
 | k3s-master-2 | 172.31.90.42 | 54.209.135.198 |
 | k3s-master-3 | 172.31.81.23 | 34.227.14.219 |
 
