@@ -471,6 +471,15 @@ aws ec2 modify-instance-metadata-options \
 
 See `registries.yml` for the ECR configuration. The recommended approach on EC2 is to attach the `AmazonEC2ContainerRegistryReadOnly` IAM policy to the instance profile — no static credentials are needed.
 
+# Student Name: Buhle Simelane
+# Student Number: [YourStudentNumber]
+# Course: Communication Networks Practise 4
+# Assignment: K3s AWS Assignment 1
+
+## 1. Assignment Overview
+Goal: Set up a K3s high-availability cluster on AWS with multiple master and worker nodes.
+Include Ingress-nginx, verify pod deployment, and check node readiness.
+
 # Architecture Explanation
 ## What is K3s and Why It Was Used
 
