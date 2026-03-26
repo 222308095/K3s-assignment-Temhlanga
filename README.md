@@ -471,7 +471,7 @@ aws ec2 modify-instance-metadata-options \
 
 See `registries.yml` for the ECR configuration. The recommended approach on EC2 is to attach the `AmazonEC2ContainerRegistryReadOnly` IAM policy to the instance profile — no static credentials are needed.
 
-### Architecture Explanation
+# Architecture Explanation
 ## What is K3s and Why It Was Used
 
 K3s is a lightweight, production-ready Kubernetes distribution designed for resource-constrained environments, edge computing, and simplified cluster management. Unlike full Kubernetes, K3s has a smaller footprint, fewer dependencies, and built-in components like a default container runtime and service load balancer.
@@ -479,30 +479,30 @@ K3s is a lightweight, production-ready Kubernetes distribution designed for reso
 We used K3s in this assignment because it allows rapid deployment of a multi-node cluster on AWS, while maintaining compatibility with standard Kubernetes APIs. Its simplicity made it easier to experiment with high-availability setups, pod deployments, and ingress configurations without the overhead of managing a full-scale Kubernetes cluster.
 
 ## Key Components
-# Control Plane (Master Nodes)
+### Control Plane (Master Nodes)
 The control plane manages the cluster state, scheduling, and orchestration of workloads.
 In our setup, k3s-master-1 and k3s-master-2 acted as the control plane nodes.
 The API server, scheduler, and etcd (or embedded SQLite in K3s) run here, controlling pod deployment across worker nodes.
 
-# Agents (Worker Nodes)
+### Agents (Worker Nodes)
 Worker nodes, or agents, host the containers that run applications.
 Nodes join the cluster using the K3s token, which authenticates them with the control plane.
 Agents report status back to the master and execute workloads scheduled by the control plane.
 
-# Container Runtime
+### Container Runtime
 K3s comes with containerd as the default container runtime, which pulls and runs container images.
 Containerd manages container lifecycle, networking, and storage integration with minimal overhead.
 
-# CNI (Container Network Interface)
+### CNI (Container Network Interface)
 Networking in K3s is handled through a built-in lightweight CNI plugin, enabling pods to communicate across nodes.
 This allows services in one pod to communicate with services in other pods or external networks.
 
-# Ingress / Load Balancer
+### Ingress / Load Balancer
 We installed ingress-nginx to expose services outside the cluster.
 Ingress controllers act as a reverse proxy and load balancer, routing traffic to the correct service based on hostnames or paths.
 This mimics production Kubernetes setups where services need to be externally accessible while maintaining internal routing.
 
-# Storage Approach
+### Storage Approach
 K3s uses local-path-provisioner by default, which dynamically provisions hostPath volumes on the node where pods are scheduled.
 This allows pods to have persistent storage without manually configuring storage classes or external volumes.
 While suitable for small clusters, production setups may use cloud block storage or networked storage for durability and scalability.
