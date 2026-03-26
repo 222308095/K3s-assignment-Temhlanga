@@ -487,6 +487,17 @@ K3s is a lightweight, production-ready Kubernetes distribution designed for reso
 
 We used K3s in this assignment because it allows rapid deployment of a multi-node cluster on AWS, while maintaining compatibility with standard Kubernetes APIs. Its simplicity made it easier to experiment with high-availability setups, pod deployments, and ingress configurations without the overhead of managing a full-scale Kubernetes cluster.
 
+### Instances created
+<img width="1907" height="658" alt="Screenshot 2026-03-26 133501" src="https://github.com/user-attachments/assets/75c58cc3-9a4a-4677-a1e0-06e7027b58a7" />
+
+### Evidence of Deployment
+<img width="1481" height="753" alt="Sudo get nodes" src="https://github.com/user-attachments/assets/c517121c-340f-4e52-a06e-505282519899" />
+<img width="1471" height="762" alt="deploy" src="https://github.com/user-attachments/assets/3fdb3f35-af07-4684-8f55-441bc450ba36" />
+<img width="1479" height="753" alt="The Screenshot" src="https://github.com/user-attachments/assets/a4476785-8aa2-447e-90eb-752b4b4d979a" />
+<img width="1168" height="219" alt="Screenshot 2026-03-26 163212" src="https://github.com/user-attachments/assets/749bbecf-8153-4512-9f9f-9e9a1f6bc72c" />
+<img width="1474" height="222" alt="Screenshot 2026-03-26 150400" src="https://github.com/user-attachments/assets/88b132bf-1896-4120-8b87-ecc82e75a2dc" />
+
+
 ## Key Components
 ### Control Plane (Master Nodes)
 The control plane manages the cluster state, scheduling, and orchestration of workloads.
